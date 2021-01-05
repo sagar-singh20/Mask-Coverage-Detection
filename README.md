@@ -129,4 +129,6 @@ Some of the pretrained face detection model explored:
 
 
 
-In cases of still images or videos, mask coverage model runs on all the detected faces. Thus in scenarios when the face detection model fails to detect a face, the mask coverage model is not invoked, and hence the model returns no output for undetected faces (like in sample output) 
+1. In cases of still images or videos, mask coverage model runs on all the detected faces. Thus in scenarios when the face detection model fails to detect a face, the mask coverage model is not invoked, and hence the model returns no output for undetected faces (like in sample output) 
+
+2. In cases when face detection model, falsely categorize something as a face, the Mask coverage model often categorize it as covered. One the reason could be because the model finds no visible pattern of face and so the probability for uncovered (i.e, complete face) decreases.
